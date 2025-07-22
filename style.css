@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(145deg, #0f0f0f, #1c1c1c);
+  color: #ffffff;
+  overflow-x: hidden;
+  animation: fadeInBody 1s ease-in-out;
+}
+
+header {
+  background: #111111;
+  padding: 1.5em 2.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+  animation: slideInTop 0.8s ease-in-out;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: 700;
+  color: #4fd1c5;
+  text-shadow: 0 0 15px #4fd1c5;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+  position: relative;
+}
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -6px;
+  left: 0;
+  background-color: #4fd1c5;
+  transition: 0.4s ease;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  text-align: center;
+  padding: 8em 2em 4em;
+  background: radial-gradient(circle, #1a1a1a, #0f0f0f);
+  animation: fadeInUp 1s ease-in-out;
+}
+.hero h1 {
+  font-size: 3.5em;
+  color: #4fd1c5;
+  margin-bottom: 0.5em;
+  text-shadow: 0 0 25px #4fd1c5;
+}
+.hero p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8em 2em;
+  margin-top: 1.5em;
+  background: #4fd1c5;
+  color: #000;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 20px #4fd1c5a4;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background: #38b2ac;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #38b2aca4;
+}
+
+.section {
+  padding: 5em 2em;
+  text-align: center;
+  animation: fadeIn 1.3s ease;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  margin-top: 3em;
+}
+.card {
+  background: #181818;
+  padding: 2em;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(79, 209, 197, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(79, 209, 197, 0.6);
+}
+.card h2 {
+  color: #4fd1c5;
+  margin-bottom: 0.5em;
+}
+.card p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+footer {
+  background: #101010;
+  text-align: center;
+  padding: 2em;
+  font-size: 0.95em;
+  color: #999;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInBody {
+  from { opacity: 0; background-color: #000; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInTop {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.discord-btn {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.7em 1.5em;
+  background: #5865F2;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(88, 101, 242, 0.5);
+}
+.discord-btn:hover {
+  background: #4752c4;
+  transform: translateY(-3px);
+}
+
+.chatbot-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #4fd1c5;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(79, 209, 197, 0.6);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.chatbot-button:hover {
+  background-color: #38b2ac;
+  box-shadow: 0 8px 25px rgba(56, 178, 172, 0.7);
+  transform: scale(1.05);
+}

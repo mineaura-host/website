@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aura Support Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #0f0f0f;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+    }
+    .chat-box {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+    }
+    .chat-box input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+      background: #333;
+      color: white;
+    }
+    .chat-box button {
+      width: 100%;
+      padding: 10px;
+      background: #4fd1c5;
+      border: none;
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .chat-box button:hover {
+      background: #38b2ac;
+    }
+    .status {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-box">
+    <h2>🧠 Aura Support Bot</h2>
+    <p>Please enter your email to start chatting with us:</p>
+    <input type="email" id="email" placeholder="your@email.com" required>
+    <button onclick="saveEmail()">Start Chat</button>
+    <div class="status" id="status"></div>
+  </div>
+
+  <script>
+    function saveEmail() {
+      const email = document.getElementById("email").value;
+      const status = document.getElementById("status");
+
+      fetch('save_email.php', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "email=" + encodeURIComponent(email)
+      })
+      .then(response => response.text())
+      .then(data => {
+        if (data.trim() === "saved") {
+          status.innerHTML = "✅ Email saved. Chat started!";
+        } else {
+          status.innerHTML = "❌ Invalid email. Please try again.";
+        }
+      })
+      .catch(error => {
+        status.innerHTML = "❌ Error saving email.";
+        console.error(error);
+      });
+    }
+  </script>
+</body>
+</html>

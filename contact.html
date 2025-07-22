@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - MineAura</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    .container {
+      flex: 1;
+      padding: 2em;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      background: #1f1f1f;
+    }
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #4fd1c5;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1em;
+      padding: 0;
+      margin: 0;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover, .btn {
+      color: #4fd1c5;
+    }
+    .section {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    form {
+      margin-top: 2em;
+    }
+    input, textarea {
+      width: 100%;
+      max-width: 400px;
+      padding: 1em;
+      margin: 0.5em 0;
+      border: none;
+      border-radius: 8px;
+      background: #1e1e1e;
+      color: #fff;
+      font-size: 1em;
+    }
+    textarea {
+      height: 150px;
+      resize: vertical;
+    }
+    .btn {
+      margin-top: 1em;
+      padding: 0.8em 2em;
+      background: #4fd1c5;
+      color: #121212;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #3aa9a0;
+    }
+    .section a {
+      color: #4fd1c5;
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1em 0;
+      background: #1f1f1f;
+      font-size: 0.9em;
+    }
+    .discord-btn {
+      display: inline-block;
+      margin-top: 0.5em;
+      padding: 0.5em 1em;
+      background: #5865F2;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .discord-btn:hover {
+      background: #4752c4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">MineAura</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="plans.html">Plans</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="support.html" class="btn">AuraChatBot</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="section">
+      <h1>Contact Us</h1>
+      <p>Need help or want to collaborate? Reach us below:</p>
+      <form>
+        <input type="text" placeholder="Your Name" required /><br/>
+        <input type="email" placeholder="Your Email" required /><br/>
+        <textarea placeholder="Your Message" required></textarea><br/>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      <p>Or join our <a href="https://discord.gg/7G5MUzp5NJ" target="_blank">Discord</a></p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 MineAura Hosting | Contact the team any time.</p>
+    <a href="https://discord.gg/7G5MUzp5NJ" target="_blank" class="discord-btn">Join Our Discord</a>
+  </footer>
+</body>
+</html>
