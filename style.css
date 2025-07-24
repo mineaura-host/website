@@ -15,8 +15,9 @@ body {
   animation: fadeInBody 1s ease-in-out;
 }
 
+/* Header */
 header {
-  background: #111111;
+  background: #111;
   padding: 1.5em 2.5em;
   display: flex;
   justify-content: space-between;
@@ -24,12 +25,13 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   animation: slideInTop 0.8s ease-in-out;
 }
 
+/* Logo */
 .logo {
-  font-size: 2em;
+  font-size: 2.2em;
   font-weight: 700;
   color: #4fd1c5;
   text-shadow: 0 0 15px #4fd1c5;
@@ -39,6 +41,7 @@ header {
   transform: scale(1.1);
 }
 
+/* Nav */
 nav ul {
   list-style: none;
   display: flex;
@@ -65,14 +68,15 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+/* Hero Section */
 .hero {
   text-align: center;
-  padding: 8em 2em 4em;
+  padding: 9em 2em 5em;
   background: radial-gradient(circle, #1a1a1a, #0f0f0f);
   animation: fadeInUp 1s ease-in-out;
 }
 .hero h1 {
-  font-size: 3.5em;
+  font-size: 4em;
   color: #4fd1c5;
   margin-bottom: 0.5em;
   text-shadow: 0 0 25px #4fd1c5;
@@ -82,10 +86,11 @@ nav ul li a:hover::after {
   color: #ccc;
 }
 
+/* General Button */
 .btn {
   display: inline-block;
-  padding: 0.8em 2em;
-  margin-top: 1.5em;
+  padding: 0.8em 2.2em;
+  margin-top: 1.8em;
   background: #4fd1c5;
   color: #000;
   border-radius: 50px;
@@ -96,16 +101,18 @@ nav ul li a:hover::after {
 }
 .btn:hover {
   background: #38b2ac;
-  transform: scale(1.05);
+  transform: scale(1.08);
   box-shadow: 0 0 30px #38b2aca4;
 }
 
+/* Section */
 .section {
-  padding: 5em 2em;
+  padding: 6em 2em;
   text-align: center;
   animation: fadeIn 1.3s ease;
 }
 
+/* Cards */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -117,13 +124,13 @@ nav ul li a:hover::after {
   background: #181818;
   padding: 2em;
   border-radius: 15px;
-  width: 300px;
+  width: 320px;
   box-shadow: 0 0 20px rgba(79, 209, 197, 0.3);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px rgba(79, 209, 197, 0.6);
+  transform: translateY(-12px);
+  box-shadow: 0 0 35px rgba(79, 209, 197, 0.6);
 }
 .card h2 {
   color: #4fd1c5;
@@ -135,6 +142,7 @@ nav ul li a:hover::after {
   color: #ddd;
 }
 
+/* Footer */
 footer {
   background: #101010;
   text-align: center;
@@ -162,10 +170,11 @@ footer {
   to { transform: translateY(0); opacity: 1; }
 }
 
+/* Discord Button */
 .discord-btn {
   display: inline-block;
   margin-top: 1em;
-  padding: 0.7em 1.5em;
+  padding: 0.7em 1.8em;
   background: #5865F2;
   color: white;
   font-weight: bold;
@@ -179,6 +188,7 @@ footer {
   transform: translateY(-3px);
 }
 
+/* Chatbot Button */
 .chatbot-button {
   position: fixed;
   bottom: 25px;
@@ -186,16 +196,15 @@ footer {
   background-color: #4fd1c5;
   color: #000;
   font-weight: bold;
-  padding: 12px 18px;
+  padding: 12px 20px;
   border-radius: 50px;
   text-decoration: none;
   box-shadow: 0 5px 20px rgba(79, 209, 197, 0.6);
   transition: all 0.3s ease-in-out;
   z-index: 1000;
 }
-
 .chatbot-button:hover {
   background-color: #38b2ac;
   box-shadow: 0 8px 25px rgba(56, 178, 172, 0.7);
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
